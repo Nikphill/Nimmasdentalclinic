@@ -26,6 +26,14 @@ import {
   Check
 } from 'lucide-react';
 import { saveLead, FormSubmission } from '../services/leadsStore';
+import caseVeneersBefore from '../assets/images/case_veneers_before.jpg';
+import caseVeneersAfter from '../assets/images/case_veneers_after.jpg';
+import caseWhiteningBefore from '../assets/images/case_whitening_before.jpg';
+import caseWhiteningAfter from '../assets/images/case_whitening_after.jpg';
+import caseOrthoBefore from '../assets/images/case_ortho_before.jpg';
+import caseOrthoAfter from '../assets/images/case_ortho_after.jpg';
+import drAbhishekImg from '../assets/images/dr_abhishek_portrait_1790654546044.jpg';
+import drKranthiImg from '../assets/images/dr_kranthi_portrait_1790654560360.jpg';
 
 interface CosmeticDentistryPageProps {
   onBackToHome: () => void;
@@ -308,8 +316,8 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
                   <img
                     src={
                       heroComparisonState === 'after'
-                        ? '/src/assets/images/case_veneers_after.jpg'
-                        : '/src/assets/images/case_veneers_before.jpg'
+                        ? caseVeneersAfter
+                        : caseVeneersBefore
                     }
                     alt={
                       heroComparisonState === 'after'
@@ -690,8 +698,8 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
                   <img
                     src={
                       caseViews.veneers === 'after'
-                        ? '/src/assets/images/case_veneers_after.jpg'
-                        : '/src/assets/images/case_veneers_before.jpg'
+                        ? caseVeneersAfter
+                        : caseVeneersBefore
                     }
                     alt="Porcelain Veneers Case"
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
@@ -771,8 +779,8 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
                   <img
                     src={
                       caseViews.whitening === 'after'
-                        ? '/src/assets/images/case_whitening_after.jpg'
-                        : '/src/assets/images/case_whitening_before.jpg'
+                        ? caseWhiteningAfter
+                        : caseWhiteningBefore
                     }
                     alt="Laser Teeth Whitening Case"
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
@@ -852,8 +860,8 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
                   <img
                     src={
                       caseViews.ortho === 'after'
-                        ? '/src/assets/images/case_ortho_after.jpg'
-                        : '/src/assets/images/case_ortho_before.jpg'
+                        ? caseOrthoAfter
+                        : caseOrthoBefore
                     }
                     alt="Invisible Aligners Case"
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
@@ -1321,7 +1329,7 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
             <div className="grid sm:grid-cols-2 gap-4 mb-8 p-4 rounded-3xl bg-slate-50 border border-slate-200/80">
               <div className="flex items-center gap-4 bg-white p-3.5 rounded-2xl shadow-sm border border-slate-100/90">
                 <img 
-                  src="/src/assets/images/dr_abhishek_portrait_1790654546044.jpg" 
+                  src={drAbhishekImg}
                   alt="Dr. Abhishek Reddy Nimma" 
                   className="w-14 h-14 rounded-2xl object-cover object-top border-2 border-white shadow-sm ring-1 ring-slate-200 shrink-0"
                   referrerPolicy="no-referrer"
@@ -1335,7 +1343,7 @@ export const CosmeticDentistryPage: React.FC<CosmeticDentistryPageProps> = ({
 
               <div className="flex items-center gap-4 bg-white p-3.5 rounded-2xl shadow-sm border border-slate-100/90">
                 <img 
-                  src="/src/assets/images/dr_kranthi_portrait_1790654560360.jpg" 
+                  src={drKranthiImg} 
                   alt="Dr. Kranthi Nimma" 
                   className="w-14 h-14 rounded-2xl object-cover object-top border-2 border-white shadow-sm ring-1 ring-slate-200 shrink-0"
                   referrerPolicy="no-referrer"
