@@ -75,14 +75,13 @@ export const StaffLeadsPortal: React.FC<StaffLeadsPortalProps> = ({
   const [changePwError, setChangePwError] = useState<string | null>(null);
 
   const getStoredPassword = () => {
-    return localStorage.getItem('nimma_custom_staff_pw') || 'nimma2026';
+    return localStorage.getItem('nimma_custom_staff_pw') || 'Nimma@12';
   };
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     const stored = getStoredPassword();
     const cleanInput = passwordInput.trim();
-    if (cleanInput === stored || cleanInput === '88851' || cleanInput === 'nimma2026' || cleanInput === 'admin') {
       setIsAuthenticated(true);
       sessionStorage.setItem('nimma_staff_auth', 'true');
       if (rememberMe) {
@@ -90,7 +89,6 @@ export const StaffLeadsPortal: React.FC<StaffLeadsPortalProps> = ({
       }
       setAuthError(null);
     } else {
-      setAuthError('Incorrect passcode. Use default: nimma2026 or front-desk PIN: 88851');
     }
   };
 
@@ -105,7 +103,6 @@ export const StaffLeadsPortal: React.FC<StaffLeadsPortalProps> = ({
   const handleChangePassword = (e: React.FormEvent) => {
     e.preventDefault();
     const stored = getStoredPassword();
-    if (currentPwInput !== stored && currentPwInput !== 'nimma2026' && currentPwInput !== '88851') {
       setChangePwError('Current password is incorrect.');
       return;
     }
@@ -333,22 +330,6 @@ export const StaffLeadsPortal: React.FC<StaffLeadsPortalProps> = ({
             </button>
           </form>
 
-          {/* Clinic Passcode Hint Box */}
-          <div className="mt-8 p-4 rounded-2xl bg-slate-900/70 border border-slate-700/60 text-center space-y-1.5">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 font-mono">
-              Staff Quick Credentials
-            </p>
-            <div className="flex items-center justify-center gap-3 text-xs">
-              <span className="font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
-                nimma2026
-              </span>
-              <span className="text-slate-500">or PIN</span>
-              <span className="font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
-                88851
-              </span>
-            </div>
-          </div>
-        </div>
 
         {/* Footer info */}
         <div className="max-w-md mx-auto w-full text-center text-[11px] text-slate-500 mt-6 z-10">
