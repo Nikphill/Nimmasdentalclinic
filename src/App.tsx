@@ -42,6 +42,15 @@ import {
 import { CosmeticDentistryPage } from './components/CosmeticDentistryPage';
 import { StaffLeadsPortal } from './components/StaffLeadsPortal';
 import { saveLead, getLeads } from './services/leadsStore';
+import caseOrthoBefore from './assets/images/case_ortho_before.jpg';
+import caseOrthoAfter from './assets/images/case_ortho_after.jpg';
+import caseWhiteningBefore from './assets/images/case_whitening_before.jpg';
+import caseWhiteningAfter from './assets/images/case_whitening_after.jpg';
+import caseVeneersBefore from './assets/images/case_veneers_before.jpg';
+import caseVeneersAfter from './assets/images/case_veneers_after.jpg';
+import drAbhishekImg from './assets/images/dr_abhishek_portrait_1790654546044.jpg';
+import drKranthiImg from './assets/images/dr_kranthi_portrait_1790654560360.jpg';
+import clinicHeroImg from './assets/images/clinic_hero_image_1779109449064.png';
 
 // --- SVGs & Brand Logos ---
 
@@ -109,8 +118,8 @@ const BeforeAfterSlider = () => {
       subtitle: 'Braces & Clear Aligners',
       beforeTip: 'Crowded & Misaligned Teeth',
       afterTip: 'Perfect Aesthetic Arch',
-      beforeImg: '/src/assets/images/case_ortho_before.jpg',
-      afterImg: '/src/assets/images/case_ortho_after.jpg',
+     	beforeImg: caseOrthoBefore,
+     afterImg: caseOrthoAfter,
       desc: 'Achieved a beautiful symmetrical smile arch and corrected heavy diagnostic crowding within 14 months using premium custom alignments.'
     },
     {
@@ -119,8 +128,8 @@ const BeforeAfterSlider = () => {
       subtitle: 'Power Smile Design',
       beforeTip: 'Heavy Coffee & Tea Stains',
       afterTip: '8-Shade Lighter Brilliance',
-      beforeImg: '/src/assets/images/case_whitening_before.jpg',
-      afterImg: '/src/assets/images/case_whitening_after.jpg',
+      beforeImg: caseWhiteningBefore,
+      afterImg: caseWhiteningAfter,
       desc: 'Removed deep enamel discoloration and dark extrinsic organic staining dynamically in a single 45-minute in-office session.'
     },
     {
@@ -129,8 +138,8 @@ const BeforeAfterSlider = () => {
       subtitle: 'Serrated Crack Repair',
       beforeTip: 'Chipped & Uneven Edges',
       afterTip: 'Seamless Laminate Crowns',
-      beforeImg: '/src/assets/images/case_veneers_before.jpg',
-      afterImg: '/src/assets/images/case_veneers_after.jpg',
+      beforeImg: caseVeneersBefore,
+      afterImg: caseVeneersAfter,
       desc: 'Designed ultra-thin, highly biocompatible porcelain veneers to seamlessly restore symmetry, chips, and anatomical gaps.'
     }
   ];
@@ -472,12 +481,12 @@ const AppointmentConcierge = ({ onOpenStaffPortal }: { onOpenStaffPortal?: () =>
     {
       name: 'Dr. Abhishek Reddy Nimma',
       title: 'Consultant Oral & Maxillofacial Surgeon',
-      img: '/src/assets/images/dr_abhishek_portrait_1790654546044.jpg'
+     img: drAbhishekImg
     },
     {
       name: 'Dr. Kranthi Nimma',
       title: 'Consultant Periodontist & Smile Specialist',
-      img: '/src/assets/images/dr_kranthi_portrait_1790654560360.jpg'
+      img: drKranthiImg
     }
   ];
 
@@ -1187,7 +1196,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/clinic_hero_image_1779109449064.png"
+          src={clinicHeroImg}
           alt="Modern Dental Clinic"
           className="w-full h-full object-cover opacity-[0.04]"
           referrerPolicy="no-referrer"
@@ -2035,7 +2044,7 @@ const Team = () => {
     {
       name: 'Dr. Abhishek Reddy Nimma',
       role: 'Consultant Oral & Maxillofacial Surgeon',
-      image: '/src/assets/images/dr_abhishek_portrait_1790654546044.jpg',
+     image: drAbhishekImg,
       credentials: 'BDS, MDS • Oral & Maxillofacial Surgery',
       experience: '12+ Years Clinical Experience',
       badge: 'Hospital Surgical Lead',
@@ -2045,7 +2054,7 @@ const Team = () => {
     {
       name: 'Dr. Kranthi Nimma',
       role: 'Consultant Periodontist & Aesthetic Specialist',
-      image: '/src/assets/images/dr_kranthi_portrait_1790654560360.jpg',
+      image: drKranthiImg,
       credentials: 'BDS, MDS • Periodontology & Smile Architecture',
       experience: '10+ Years Dedicated Care',
       badge: 'Chief Aesthetic Specialist',
